@@ -7,12 +7,14 @@ public class Enemy : MonoBehaviour
 
     Transform target;
     Vector3 direction;
+    public GameObject gameManager;
     private float velocity;
     public float speed = 4f; // 구체 속도
     public float damage = 1f; // 데미지
 
     void Start()
     {
+        
     }
     void Update()
     {
@@ -35,6 +37,8 @@ public class Enemy : MonoBehaviour
  
          if (other.gameObject.tag == "Weapon")
          {
+             PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score", 0) + 10);
+             Debug.Log(PlayerPrefs.GetInt("Score", 0));
              Destroy(this.gameObject);
          }
      }

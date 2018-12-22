@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                 random.x += player.transform.position.x;
                 random.y += player.transform.position.y;
             }
-            Instantiate(Obj[(int)Random.Range(0, Obj.Length + 0.99f)], random, Quaternion.identity);
+            Instantiate(Obj[(int)Random.Range(0, Obj.Length + -1.01f)], random, Quaternion.identity);
             preTime = Time.time;
         }
     }
