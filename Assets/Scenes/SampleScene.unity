@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1648987572502960422, guid: 74b7b85b44ea84440959bed68e475300, type: 3}
   player: {fileID: 125631540}
-  spawnTime: 0.5
+  spawnTime: 1
 --- !u!212 &621926587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 9037017036544725113, guid: 3729634bc71522f4185cb44c5be9e9be,
         type: 3}
       propertyPath: speed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3729634bc71522f4185cb44c5be9e9be, type: 3}
