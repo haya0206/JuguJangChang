@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     public float moveSpeed = 8f;
     public Joystick joystick;
+    public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,8 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
+        transform.Rotate (Vector3.right * Time.deltaTime); 
+        Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);    
         if (moveVector != Vector3.zero)
         {
             transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.World);
