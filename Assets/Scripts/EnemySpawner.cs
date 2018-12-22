@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy;
+    [SerializeField] private GameObject[] Obj;
     public GameObject player;
     public float spawnTime = 0.2f;
     float preTime = 0;
@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                 random.x += player.transform.position.x;
                 random.y += player.transform.position.y;
             }
-            Instantiate(enemy, random, Quaternion.identity);
+            Instantiate(Obj[(int)Random.Range(0, Obj.Length + 0.99f)], random, Quaternion.identity);
             preTime = Time.time;
         }
     }
