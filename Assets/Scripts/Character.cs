@@ -16,8 +16,8 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate (Vector3.right * Time.deltaTime); 
         Vector3 moveVector = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);    
+        transform.Rotate(Vector3.back , 20 * speed * Time.deltaTime);
         if (moveVector != Vector3.zero)
         {
             transform.Translate(moveVector * moveSpeed * Time.deltaTime, Space.World);
