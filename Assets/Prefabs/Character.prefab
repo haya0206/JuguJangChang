@@ -93,4 +93,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  joystick: {fileID: 114567654956667342, guid: cdd5474b97f1a9d40bea678ca8dec2bb, type: 3}
+  joystick: {fileID: 1871837675, guid: be06bd9526bf5c64b913b011e3d5cccc, type: 3}
+  speed: 10
